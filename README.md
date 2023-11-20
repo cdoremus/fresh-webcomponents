@@ -1,7 +1,7 @@
-# Fresh project
+# Deno Fresh Web Components Demo
 
-Your new Fresh project is ready to go. You can follow the Fresh "Getting
-Started" guide here: https://fresh.deno.dev/docs/getting-started
+This repo demos the use of Web Components with
+[Deno Fresh](https://fresh.deno.dev).
 
 ### Usage
 
