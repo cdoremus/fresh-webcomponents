@@ -15,25 +15,37 @@ export default function Home() {
             height="128"
             alt="the Fresh logo: a sliced lemon dripping with juice"
           />
-          <h1 class="text-4xl font-bold">Welcome to Fresh</h1>
-          <p class="my-4">
-            Try updating this message in the
-            <code class="mx-2">./routes/index.tsx</code> file, and refresh.
-          </p>
+          <h1 class="text-4xl font-bold">Deno Fresh Web Component Demo</h1>
+          <hr style="color:black;" />
           <h3>Preact Counter</h3>
           <Counter count={count} />
-          <h3>Web Component Wrapped Counter</h3>
+          <h3>Web Component HTML Wrapped Counter</h3>
+          {/* @ts-ignore WC */}
+          <counter-wc>
+            <div class="flex gap-8 py-6">
+              <button class="px-2 py-1 border-gray-500 border-2 rounded bg-white hover:bg-gray-200 transition-colors">
+                -1
+              </button>
+              <p id="counter-count" class="text-3xl">3</p>
+              <button class="px-2 py-1 border-gray-500 border-2 rounded bg-white hover:bg-gray-200 transition-colors">
+                +1
+              </button>
+            </div>
+            {/* @ts-ignore WC */}
+          </counter-wc>
+          <h3>Web Component Preact Wrapped Counter</h3>
           {/* @ts-ignore WC */}
           <counter-wc>
             <WCWrappedCounter
               initialCount={3}
-              attributes={{ title: "count button" }}
+              attributes={{ title: "Preact-WC Counter button" }}
             />
             {/* @ts-ignore WC */}
           </counter-wc>
-          <hr />
+          <h3>Greeting Web Component</h3>
+
           {/* @ts-ignore HelloWC */}
-          <hello-wc message="WC in Deno">
+          <hello-wc message="from Web Component embedded in Fresh">
             {/* @ts-ignore HelloWC */}
           </hello-wc>
         </div>

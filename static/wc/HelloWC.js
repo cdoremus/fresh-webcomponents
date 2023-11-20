@@ -20,7 +20,10 @@ class HelloWC extends HTMLElement {
 
   /** @method */
   connectedCallback() {
-    this.innerHTML = `<div><h2>Hello ${this.message}!!</h2></div>`;
+    this.innerHTML =
+      `<div style="border: 2px solid black; border-radius: 10px; margin: 10px 5px; padding: 5px 10px;">
+        <h4>Hello ${this.message}!!</h4>
+      </div>`;
   }
 }
 customElements.define("hello-wc", HelloWC);
