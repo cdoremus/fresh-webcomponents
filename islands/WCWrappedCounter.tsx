@@ -20,7 +20,6 @@ interface CounterProps {
 }
 
 export default function WCWrappedCounter(props?: CounterProps) {
-  console.log("attrs: ", props?.attributes);
   return (
     <div class="flex gap-8 py-6">
       {button("-1", props?.attributes)}

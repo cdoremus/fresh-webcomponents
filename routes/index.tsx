@@ -25,7 +25,6 @@ export default function Home() {
           <h3>Web Component Wrapped Counter</h3>
           {/* @ts-ignore WC */}
           <counter-wc>
-            {/* @ts-ignore bogus */}
             <WCWrappedCounter
               initialCount={3}
               attributes={{ title: "count button" }}
