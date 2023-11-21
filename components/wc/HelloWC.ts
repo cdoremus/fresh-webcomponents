@@ -8,6 +8,7 @@
  * @module HelloWC
  */
 class HelloWC extends HTMLElement {
+  message: string;
   /** @constructor */
   constructor() {
     super();
@@ -15,7 +16,7 @@ class HelloWC extends HTMLElement {
      * @attribute {string} message - the message to be displayed
      * @private
      */
-    this.message = this.getAttribute("message");
+    this.message = this.getAttribute("message") as string;
   }
 
   /** @method */

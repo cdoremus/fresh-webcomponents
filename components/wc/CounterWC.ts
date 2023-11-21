@@ -8,11 +8,13 @@
  * @module CounterWC
  */
 class CounterWC extends HTMLElement {
+  buttons: NodeListOf<HTMLButtonElement>;
+  counterCount: HTMLElement;
   /** @constructor */
   constructor() {
     super();
     /**
-     * @attribute {Array<Node<HTMLButton>>} buttons - the increment/decrement buttons
+     * @attribute {NodeListOf<HTMLButtonElement>} buttons - the increment/decrement buttons
      * @private
      */
     this.buttons = this.querySelectorAll("button");
@@ -20,7 +22,7 @@ class CounterWC extends HTMLElement {
      * @attribute {HTMLElement} counter-count - Holds the current count value
      * @private
      */
-    this.counterCount = this.querySelector("#counter-count");
+    this.counterCount = this.querySelector("#counter-count") as HTMLElement;
   }
 
   /** @method */
@@ -28,8 +30,8 @@ class CounterWC extends HTMLElement {
     for (const button of this.buttons) {
       button.addEventListener("click", () => {
         const countHTML = parseInt(this.counterCount.innerHTML);
-        this.counterCount.innerHTML = countHTML +
-          parseInt(button.innerHTML);
+        this.counterCount.innerHTML = (countHTML as number +
+          parseInt(button.innerHTML)).toString();
       });
     }
   }

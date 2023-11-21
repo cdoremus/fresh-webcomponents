@@ -8,8 +8,11 @@ export default function App({ Component }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Deno Fresh Web Components</title>
         <link rel="stylesheet" href="/styles.css" />
-        <script src="/wc/HelloWC.js" type="module"></script>
-        <script src="/wc/CounterWC.js" type="module"></script>
+        <script src="/wc/wc.esm.js" type="module"></script>
+        {
+          /* <script src="/wc1/HelloWC.js" type="module"></script>
+        <script src="/wc1/CounterWC.js" type="module"></script> */
+        }
       </head>
       <body>
         <Component />
