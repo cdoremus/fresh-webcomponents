@@ -20,7 +20,6 @@ export default function Home() {
           <h3>Preact Counter</h3>
           <Counter count={count} />
           <h3>Web Component HTML Wrapped Counter</h3>
-          {/* @ts-ignore WC */}
           <counter-wc>
             <div class="flex gap-8 py-6">
               <button class="px-2 py-1 border-gray-500 border-2 rounded bg-white hover:bg-gray-200 transition-colors">
@@ -31,22 +30,18 @@ export default function Home() {
                 +1
               </button>
             </div>
-            {/* @ts-ignore WC */}
           </counter-wc>
           <h3>Web Component Preact Wrapped Counter</h3>
-          {/* @ts-ignore WC */}
           <counter-wc>
             <WCWrappedCounter
               initialCount={3}
               attributes={{ title: "Preact-WC Counter button" }}
             />
-            {/* @ts-ignore WC */}
           </counter-wc>
+
           <h3>Greeting Web Component</h3>
 
-          {/* @ts-ignore HelloWC */}
           <hello-wc message="from Web Component embedded in Fresh">
-            {/* @ts-ignore HelloWC */}
           </hello-wc>
         </div>
       </div>

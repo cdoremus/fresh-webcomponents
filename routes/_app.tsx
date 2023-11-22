@@ -9,10 +9,8 @@ export default function App({ Component }: AppProps) {
         <title>Deno Fresh Web Components</title>
         <link rel="stylesheet" href="/styles.css" />
         <script src="/wc/wc.esm.js" type="module"></script>
-        {
-          /* <script src="/wc1/HelloWC.js" type="module"></script>
-        <script src="/wc1/CounterWC.js" type="module"></script> */
-        }
+        <script src="https://unpkg.com/jb-date-input/dist/JBDateInput.umd.js">
+        </script>
       </head>
       <body>
         <Component />
