@@ -43,6 +43,10 @@ export default function Home() {
 
           <hello-wc message="from Web Component embedded in Fresh">
           </hello-wc>
+
+          <h3>Lit Web Component</h3>
+          {/* @ts-ignore lit wc */}
+          <my-lit-element></my-lit-element>
         </div>
       </div>
     </div>
