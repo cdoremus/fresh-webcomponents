@@ -35,6 +35,11 @@ html {
     "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+
+nav {
+  border: 2px sold black;
+}
+
 .transition-colors {
   transition-property: background-color, border-color, color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -123,4 +128,41 @@ html {
 }
 .hover\:bg-gray-200:hover {
   background-color: #e5e7eb;
+}
+
+/* Third-party WCs*/
+
+two-up {
+  flex: 1;
+  height: 200px;
+}
+.light, .dark {
+  text-align: center;
+  padding: 10px 0 0;
+}
+.dark {
+  background: #555;
+  color: #ccc;
+}
+
+web-accordion-item h3 {
+  background:grey;
+  margin:0;
+  padding:10px;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+web-accordion-item div {
+  background:lightgray;
+  padding:20px 10px;
+}
+
+web-accordion-item div p {
+  padding:20px 10px;
+}
+
+two-up {
+  display:flex;
+  justify-content: center;
 }

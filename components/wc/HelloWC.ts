@@ -13,10 +13,11 @@ class HelloWC extends HTMLElement {
   constructor() {
     super();
     /**
-     * @attribute {string} message - the message to be displayed
+     * @attribute {string} message - the message to be displayed. The message
+     * 'World' is the default if no message attribute is set.
      * @private
      */
-    this.message = this.getAttribute("message") as string;
+    this.message = this.getAttribute("message") as string ?? "World";
   }
 
   /** @method */

@@ -28,7 +28,7 @@ var HelloWC = class extends HTMLElement {
   /** @constructor */
   constructor() {
     super();
-    this.message = this.getAttribute("message");
+    this.message = this.getAttribute("message") ?? "World";
   }
   /** @method */
   connectedCallback() {
@@ -63,6 +63,16 @@ var h = class {
   }
 };
 var m = (r) => new h(typeof r == "string" ? r : r + "", void 0, f);
+var v = (r, ...t2) => {
+  let e = r.length === 1 ? r[0] : t2.reduce((s, i, o3) => s + ((n) => {
+    if (n._$cssResult$ === true)
+      return n.cssText;
+    if (typeof n == "number")
+      return n;
+    throw Error("Value passed to 'css' function must be a 'css' function result: " + n + ". Use 'unsafeCSS' to pass non-literal values, but take care to ensure page security.");
+  })(i) + r[o3 + 1], r[0]);
+  return new h(e, r, f);
+};
 var S = (r, t2) => {
   if (p)
     r.adoptedStyleSheets = t2.map((e) => e instanceof CSSStyleSheet ? e : e.styleSheet);
@@ -315,8 +325,8 @@ var O2 = "$lit$";
 var d2 = `lit$${(Math.random() + "").slice(9)}$`;
 var R2 = "?" + d2;
 var K = `<${R2}>`;
-var v = document;
-var H = () => v.createComment("");
+var v2 = document;
+var H = () => v2.createComment("");
 var N = (o3) => o3 === null || typeof o3 != "object" && typeof o3 != "function";
 var z = Array.isArray;
 var Z = (o3) => z(o3) || typeof o3?.[Symbol.iterator] == "function";
@@ -336,7 +346,7 @@ var Y = F(2);
 var b = Symbol.for("lit-noChange");
 var A2 = Symbol.for("lit-nothing");
 var j = /* @__PURE__ */ new WeakMap();
-var g2 = v.createTreeWalker(v, 129);
+var g2 = v2.createTreeWalker(v2, 129);
 function G(o3, t2) {
   if (!Array.isArray(o3) || !o3.hasOwnProperty("raw"))
     throw Error("invalid template strings array");
@@ -392,7 +402,7 @@ var C2 = class o {
     }
   }
   static createElement(t2, s) {
-    let e = v.createElement("template");
+    let e = v2.createElement("template");
     return e.innerHTML = t2, e;
   }
 };
@@ -413,7 +423,7 @@ var w2 = class {
     return this._$AM._$AU;
   }
   u(t2) {
-    let { el: { content: s }, parts: e } = this._$AD, i = (t2?.creationScope ?? v).importNode(s, true);
+    let { el: { content: s }, parts: e } = this._$AD, i = (t2?.creationScope ?? v2).importNode(s, true);
     g2.currentNode = i;
     let n = g2.nextNode(), r = 0, _2 = 0, h2 = e[0];
     for (; h2 !== void 0; ) {
@@ -423,7 +433,7 @@ var w2 = class {
       }
       r !== h2?.index && (n = g2.nextNode(), r++);
     }
-    return g2.currentNode = v, i;
+    return g2.currentNode = v2, i;
   }
   p(t2) {
     let s = 0;
@@ -458,7 +468,7 @@ var y2 = class o2 {
     this._$AH !== t2 && (this._$AR(), this._$AH = this.k(t2));
   }
   _(t2) {
-    this._$AH !== A2 && N(this._$AH) ? this._$AA.nextSibling.data = t2 : this.$(v.createTextNode(t2)), this._$AH = t2;
+    this._$AH !== A2 && N(this._$AH) ? this._$AA.nextSibling.data = t2 : this.$(v2.createTextNode(t2)), this._$AH = t2;
   }
   g(t2) {
     let { values: s, _$litType$: e } = t2, i = typeof e == "number" ? this._$AC(t2) : (e.el === void 0 && (e.el = C2.createElement(G(e.h, e.h[0]), this.options)), e);
@@ -597,13 +607,17 @@ l2?.({ LitElement: t });
 
 // components/wc/MyLitWC.ts
 var MyLitElement = class extends t {
-  version = "STARTING";
+  // @property()
+  static properties = { version: "" };
+  version = "";
+  #styles = v`color:red`;
   constructor() {
     super();
+    this.version = "Starting List";
   }
   render() {
     return X`
-    <p>Welcome to the Lit tutorial!</p>
+    <p style={this.styles}>Welcome to the Lit tutorial!</p>
     <p>This is the ${this.version} code.</p>
     `;
   }

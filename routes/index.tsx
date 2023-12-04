@@ -8,14 +8,7 @@ export default function Home() {
     <div>
       <div class="px-4 py-8 mx-auto bg-[#86efac]">
         <div class="max-w-screen-md mx-auto flex flex-col items-center justify-center">
-          <img
-            class="my-6"
-            src="/logo.svg"
-            width="128"
-            height="128"
-            alt="the Fresh logo: a sliced lemon dripping with juice"
-          />
-          <h1 class="text-4xl font-bold">Deno Fresh Web Component Demo</h1>
+          <div class="text-3xl font-bold">Counter Display Options</div>
           <hr style="color:black;" />
           <h3>Preact Counter</h3>
           <Counter count={count} />
@@ -39,12 +32,7 @@ export default function Home() {
             />
           </counter-wc>
 
-          <h3>Greeting Web Component</h3>
-
-          <hello-wc message="from Web Component embedded in Fresh">
-          </hello-wc>
-
-          <h3>Lit Web Component</h3>
+          <h3>Lit Counter</h3>
           {/* @ts-ignore lit wc */}
           <my-lit-element></my-lit-element>
         </div>

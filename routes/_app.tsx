@@ -9,11 +9,34 @@ export default function App({ Component }: AppProps) {
         <title>Deno Fresh Web Components</title>
         <link rel="stylesheet" href="/styles.css" />
         <script src="/wc/wc.esm.js" type="module"></script>
-        <script src="https://fooloomanzoo.github.io/input-picker-pattern/demo/dist/custom-elements-es5-adapter.js">
-        </script>
         <script src="https://unpkg.com/two-up-element@1"></script>
+        <script
+          type="module"
+          src="https://unpkg.com/web-accordion/dist/web-accordion/web-accordion.esm.js"
+        >
+        </script>
       </head>
-      <body>
+      {/* <body class="m-x-5 md:m-x-50 m-y-0 pt-4 mx-auto max-w-screen-lg bg-blue-100"> */}
+      <body class="bg-blue-100">
+        <header class="bg-green-500 p-4 flex items-center justify-center bg-blue-100">
+          <div class="font-bold text-4xl">
+            Fresh Web Component Demo
+          </div>
+          <img
+            class="my-6"
+            src="/logo.svg"
+            width="128"
+            height="128"
+            alt="the Fresh logo: a sliced lemon dripping with juice"
+          />
+          <nav class="flex flex-col border-2 border-solid border-black ml-1.5">
+            <a href="/custom-elements" class="">Custom Elements</a>
+            <a href="/lit" class="">Lit Components</a>
+            <a href="/third-party" class="">Third-party Components</a>
+            <a href="/" class="">Home</a>
+          </nav>
+        </header>
+
         <Component />
       </body>
     </html>
