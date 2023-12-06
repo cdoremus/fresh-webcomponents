@@ -40,6 +40,9 @@ export default function App({ Component }: AppProps) {
           <Component />
         </main>
         <footer>
+          <a href="https://github.com/cdoremus/deno-fresh-webcomponents">
+            <span class="source-text">Source Code</span>
+          </a>
           <a href="https://fresh.deno.dev">
             <img
               width="197"

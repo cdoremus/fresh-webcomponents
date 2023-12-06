@@ -10,7 +10,7 @@ export default function Home() {
         <div class="max-w-screen-md mx-auto flex flex-col items-center justify-center">
           <div class="text-3xl font-bold">Counter Display Options</div>
           <hr style="color:black;" />
-          <h3>Preact Counter</h3>
+          <h3>Fresh Counter in Preact</h3>
           <Counter count={count} />
           <h3>Web Component HTML Wrapped Counter</h3>
           <counter-wc>
