@@ -10,11 +10,13 @@ export default function App({ Component }: AppProps) {
         <link rel="stylesheet" href="/styles.css" />
         <script src="/wc/wc.esm.js" type="module"></script>
         <script src="https://unpkg.com/two-up-element@1"></script>
-        <script
+        {
+          /* <script
           type="module"
           src="https://unpkg.com/web-accordion/dist/web-accordion/web-accordion.esm.js"
         >
-        </script>
+        </script> */
+        }
       </head>
       {/* <body class="m-x-5 md:m-x-50 m-y-0 pt-4 mx-auto max-w-screen-lg bg-blue-100"> */}
       <body class="bg-blue-100">

@@ -5,9 +5,10 @@ export default function ThirdPartyWCPage() {
       <div class="">
         <h2>Accordion Web Component</h2>
         {/* @ts-ignore WC */}
-        <web-accordion>
-          {/* @ts-ignore WC */}
-          <web-accordion-item>
+        {/* <web-accordion> */}
+        {/* @ts-ignore WC */}
+        {
+          /* <web-accordion-item>
             <h3 slot="title">Introduction to Fresh</h3>
             <div>
               <div class="markdown-body mb-8">
@@ -70,11 +71,11 @@ export default function ThirdPartyWCPage() {
                 </ul>
               </div>
             </div>
-            {/* @ts-ignore WC */}
-          </web-accordion-item>
+          </web-accordion-item> */
+        }
 
-          {/* @ts-ignore WC */}
-          <web-accordion-item>
+        {
+          /* <web-accordion-item>
             <h3 slot="title">Fresh Architecture</h3>
             <div class="bg-slate-100">
               <div class="markdown-body mb-8">
@@ -113,10 +114,9 @@ export default function ThirdPartyWCPage() {
                 </p>
               </div>
             </div>
-            {/* @ts-ignore WC */}
           </web-accordion-item>
-          {/* @ts-ignore WC */}
-        </web-accordion>
+        </web-accordion> */
+        }
       </div>
       <hr />
       <div class="">
