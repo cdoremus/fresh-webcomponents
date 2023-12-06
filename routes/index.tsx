@@ -32,7 +32,7 @@ export default function Home() {
             />
           </counter-wc>
 
-          <h3>Lit Counter</h3>
+          <h3>LitElement Counter</h3>
           {/* @ts-ignore lit wc */}
           <lit-counter></lit-counter>
         </div>

@@ -18,6 +18,11 @@ export class LitCounter extends LitElement {
     this.count = LitCounter.#INITIAL_COUNT;
   }
 
+  // Turn off shadow DOM
+  createRenderRoot() {
+    return this;
+  }
+
   increment = () => {
     this.count = this.count + 1;
   };
