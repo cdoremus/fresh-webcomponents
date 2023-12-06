@@ -629,11 +629,11 @@ customElements.define(
 
 // components/wc/LitCounter.js
 var LitCounter = class _LitCounter extends t {
-  static INITIAL_COUNT = 3;
+  static #INITIAL_COUNT = 3;
   static properties = { count: 0 };
   constructor() {
     super();
-    this.count = _LitCounter.INITIAL_COUNT;
+    this.count = _LitCounter.#INITIAL_COUNT;
   }
   increment = () => {
     this.count = this.count + 1;

@@ -1,11 +1,21 @@
-import { css, html, LitElement } from "https://esm.sh/lit@3.1.0";
+import { html, LitElement } from "https://esm.sh/lit@3.1.0";
 
+/**
+ * A counter component implemented with Lit.
+ *
+ * @class LitCounter @extends LitElement
+ * @classdesc Counter with increment/decrement buttons written as a Lit custom element
+ * @property { object } properties - Holds the component's reactive properties
+ * @property { number } properties.count - Holds the current count value
+ * @module LitCounter
+ */
 export class LitCounter extends LitElement {
-  static INITIAL_COUNT = 3;
+  static #INITIAL_COUNT = 3;
   static properties = { count: 0 };
+
   constructor() {
     super();
-    this.count = LitCounter.INITIAL_COUNT;
+    this.count = LitCounter.#INITIAL_COUNT;
   }
 
   increment = () => {
@@ -37,3 +47,5 @@ customElements.define(
   "lit-counter",
   LitCounter,
 );
+
+export default LitCounter;
