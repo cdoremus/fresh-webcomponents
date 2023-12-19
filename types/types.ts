@@ -14,11 +14,7 @@ interface CounterWCProps extends JSX.HTMLAttributes<HTMLElement> {
   initialCount?: number;
 }
 
-interface JbDateInputProps extends JSX.HTMLAttributes<HTMLElement> {
-  label?: string;
-  format?: string; // MM/DD/YYYY
-  value?: string; // default date
-  "use-persian-number"?: booleanString;
+interface ToolTip extends JSX.HTMLAttributes<HTMLElement> {
 }
 
 declare module "preact" {
@@ -26,7 +22,7 @@ declare module "preact" {
     interface IntrinsicElements {
       "hello-wc": HelloWCProps;
       "counter-wc": CounterWCProps;
-      "jb-date-input": JbDateInputProps;
+      "tool-tip": ToolTip;
     }
   }
 }

@@ -755,6 +755,66 @@ var CustomAlert = class extends t {
   }
 };
 customElements.define("custom-alert", CustomAlert);
+
+// components/wc/EmojiPickerWrapper.js
+var EmojiPickerWrapper = class extends HTMLElement {
+  connectedCallback() {
+    let emoji = "";
+    this.innerHTML = `
+      <div style="display: flex; gap: 4px; border: 2px solid black; border-radius: 10px; margin: 10px 5px; padding: 5px 10px;">
+        <div>
+          <emoji-picker></emoji-picker>
+        </div>
+        <div id="emoji"></div>
+      </div>`;
+    document.querySelector("emoji-picker").addEventListener("emoji-click", (event) => {
+      emoji = event.detail.unicode;
+      console.log("Emoji: ", emoji);
+      document.getElementById("emoji").innerHTML = `Selected Emoji: ${emoji}`;
+    });
+  }
+};
+customElements.define("emoji-picker-wrapper", EmojiPickerWrapper);
+
+// components/wc/ToolTipWC.ts
+var template = document.createElement("template");
+template.innerHTML = `
+  <style>
+    div.tip-container {
+      z-index: 10;
+    }
+    div.tip {
+      background-color: white;
+      font-size:0.8rem;
+      text-align: center;
+      color: red;
+      width:200px;
+      height:40px;
+      position: absolute;
+      top:-80px;
+      left: 250px;
+      border: 2px solid black;
+      box-shadow: 8px 5px 5px lightgrey;
+    }
+  </style>
+  <div class="tip-container"><div class="tip">This is the tooltip<div></div>
+  `;
+var ToolTipWC = class extends HTMLElement {
+  constructor() {
+    super();
+    const shadowRoot = this.attachShadow({ mode: "open" });
+    const templateClone = template.content.cloneNode(true);
+    shadowRoot.append(templateClone);
+  }
+  connectedCallback() {
+    const tip = document.querySelector("div.tip-container");
+    tip?.parentElement?.addEventListener(
+      "click",
+      () => tip.style.display = "block"
+    );
+  }
+};
+customElements.define("tool-tip", ToolTipWC);
 export {
   CustomAlert,
   LitCounter,

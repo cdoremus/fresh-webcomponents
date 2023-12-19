@@ -4,13 +4,18 @@ export default function CustomElementsPage() {
       <h2>Web Component Custom Elements</h2>
       <div>
         <h3>Greeting Web Component</h3>
-        {/* @ts-ignore WC */}
         <hello-wc></hello-wc>
       </div>
       <hr />
       <div>
-        {/* @ts-ignore WC */}
-        <toggle-wc></toggle-wc>
+        <h2>ToolTip</h2>
+        <div>
+          This is some{" "}
+          <div style="display:inline">
+            Tip
+            <tool-tip></tool-tip>
+          </div>
+        </div>
       </div>
     </div>
   );
