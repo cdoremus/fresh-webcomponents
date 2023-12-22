@@ -1,40 +1,48 @@
 const template = document.createElement("template");
 template.innerHTML = `
   <style>
-    div.tip-container {
-      z-index: 10;
-    }
-    div.tip {
-      background-color: white;
-      font-size:0.8rem;
-      text-align: center;
-      color: red;
-      width:200px;
-      height:40px;
+    .tooltip {
       position: relative;
-      top:-80px;
-      left: 250px;
-      border: 2px solid black;
-      box-shadow: 8px 5px 5px lightgrey;
+      display: inline-block;
+      border-bottom: 1px dotted black;
     }
-  </style>
-  <div class="tip-container"><div class="tip">This is the tooltip<div></div>
+
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 200px;
+      font-size: 1.0rem;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+
+      /* Position the tooltip */
+      position: absolute;
+      z-index: 1;
+      bottom: 100%;
+      left: 50%;
+  }
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+  }
+    </style>
+  <div class="tooltip"><slot></slot><span class="tooltiptext"></span></div>
   `;
 
 class ToolTipWC extends HTMLElement {
   constructor() {
     super();
-    const shadowRoot = this.attachShadow({ mode: "open" });
-    const templateClone = template.content.cloneNode(true);
-    shadowRoot.append(templateClone);
   }
 
   connectedCallback() {
-    // const tip = document.querySelector("div.tip-container");
-    // tip?.parentElement?.addEventListener(
-    //   "click",
-    //   () => tip.style.display = "block",
-    // );
+    const shadowRoot = this.attachShadow({ mode: "open" });
+    const templateClone = template.content.cloneNode(true);
+    shadowRoot.append(templateClone);
+    const tip = this.getAttribute("tip");
+    // console.log("Tip content", tip);
+    const text = shadowRoot.querySelector(".tooltiptext");
+    text!.textContent = tip;
   }
 }
 

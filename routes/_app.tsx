@@ -9,6 +9,13 @@ export default function App({ Component }: AppProps) {
         <title>Deno Fresh Web Components</title>
         <link rel="stylesheet" href="/styles.css" />
         <script src="/wc/wc.esm.js" type="module"></script>
+        <script type="module" src="https://esm.sh/@stefanjudis/sparkly-text">
+        </script>
+        <script
+          type="module"
+          src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"
+        >
+        </script>
         <script src="https://unpkg.com/two-up-element@1"></script>
       </head>
       {/* <body class="m-x-5 md:m-x-50 m-y-0 pt-4 mx-auto max-w-screen-lg bg-blue-100"> */}

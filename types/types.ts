@@ -15,6 +15,7 @@ interface CounterWCProps extends JSX.HTMLAttributes<HTMLElement> {
 }
 
 interface ToolTip extends JSX.HTMLAttributes<HTMLElement> {
+  tip: string;
 }
 
 declare module "preact" {

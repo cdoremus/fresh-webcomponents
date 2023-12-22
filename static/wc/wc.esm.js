@@ -780,38 +780,45 @@ customElements.define("emoji-picker-wrapper", EmojiPickerWrapper);
 var template = document.createElement("template");
 template.innerHTML = `
   <style>
-    div.tip-container {
-      z-index: 10;
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      border-bottom: 1px dotted black;
     }
-    div.tip {
-      background-color: white;
-      font-size:0.8rem;
+
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 200px;
+      font-size: 1.0rem;
+      background-color: black;
+      color: #fff;
       text-align: center;
-      color: red;
-      width:200px;
-      height:40px;
+      border-radius: 6px;
+      padding: 5px 0;
+
+      /* Position the tooltip */
       position: absolute;
-      top:-80px;
-      left: 250px;
-      border: 2px solid black;
-      box-shadow: 8px 5px 5px lightgrey;
-    }
-  </style>
-  <div class="tip-container"><div class="tip">This is the tooltip<div></div>
+      z-index: 1;
+      bottom: 100%;
+      left: 50%;
+  }
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+  }
+    </style>
+  <div class="tooltip"><slot></slot><span class="tooltiptext"></span></div>
   `;
 var ToolTipWC = class extends HTMLElement {
   constructor() {
     super();
+  }
+  connectedCallback() {
     const shadowRoot = this.attachShadow({ mode: "open" });
     const templateClone = template.content.cloneNode(true);
     shadowRoot.append(templateClone);
-  }
-  connectedCallback() {
-    const tip = document.querySelector("div.tip-container");
-    tip?.parentElement?.addEventListener(
-      "click",
-      () => tip.style.display = "block"
-    );
+    const tip = this.getAttribute("tip");
+    const text = shadowRoot.querySelector(".tooltiptext");
+    text.textContent = tip;
   }
 };
 customElements.define("tool-tip", ToolTipWC);

@@ -8,13 +8,10 @@ export default function CustomElementsPage() {
       </div>
       <hr />
       <div>
-        <h2>ToolTip</h2>
+        <h2>Tool Tip Demo</h2>
         <div>
-          This is some{" "}
-          <div style="display:inline">
-            Tip
-            <tool-tip></tool-tip>
-          </div>
+          <span class="text-xl bold">Hover over this:</span>{" "}
+          <tool-tip tip="The tooltip text">Text that needs a tooltip</tool-tip>
         </div>
       </div>
     </div>
