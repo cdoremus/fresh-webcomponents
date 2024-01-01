@@ -809,6 +809,7 @@ template.innerHTML = `
   <div class="tooltip"><slot></slot><span class="tooltiptext"></span></div>
   `;
 var ToolTipWC = class extends HTMLElement {
+  /**  @constructor */
   constructor() {
     super();
   }
