@@ -1,10 +1,8 @@
 /**
  * Definitions of web component types
  */
-import { JsxAttribute } from "https://deno.land/x/ts_morph@17.0.1/ts_morph.js";
 import { JSX } from "preact";
-
-type booleanString = "true" | "false";
+import { LitElement } from "https://esm.sh/lit@3.1.0";
 
 interface HelloWCProps extends JSX.HTMLAttributes<HTMLElement> {
   message?: string;
@@ -24,6 +22,7 @@ declare module "preact" {
       "hello-wc": HelloWCProps;
       "counter-wc": CounterWCProps;
       "tool-tip": ToolTip;
+      "lit-counter": JSX.HTMLAttributes<LitElement>;
     }
   }
 }
