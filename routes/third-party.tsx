@@ -25,14 +25,14 @@ export default function ThirdPartyWCPage() {
       </div>
       <div class="w-2/4">
         <h2>Split Window Component</h2>
-        <div class="w-2/4">
+        <div style="height: 600px">
           {/* @ts-ignore WC */}
           <two-up>
-            <div>
-              <img src="/img/2021.webp" style="height:200px; width:500px;" />
+            <div style="height: 600px">
+              <img src="/img/2021.webp" />
             </div>
-            <div>
-              <img src="/img/2011.webp" style="height:200px; width:500px;" />
+            <div style="height: 600px">
+              <img src="/img/2011.webp" />
             </div>
             {/* @ts-ignore WC */}
           </two-up>
