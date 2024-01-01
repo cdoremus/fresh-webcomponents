@@ -1,3 +1,11 @@
+/**
+ * Tool tip web component that holds the tip text in
+ * the 'tip' attribute and surrounds that text that will
+ * be linked to the tip.
+ *
+ * @class ToolTipWC @extends HTMLElement
+ * @classdesc Tool Tip web component
+ */
 const template = document.createElement("template");
 template.innerHTML = `
   <style>
@@ -31,6 +39,7 @@ template.innerHTML = `
   `;
 
 class ToolTipWC extends HTMLElement {
+  /**  @constructor */
   constructor() {
     super();
   }
@@ -39,6 +48,10 @@ class ToolTipWC extends HTMLElement {
     const shadowRoot = this.attachShadow({ mode: "open" });
     const templateClone = template.content.cloneNode(true);
     shadowRoot.append(templateClone);
+    /**
+     * @attribute {string} tip - Holds the tool tip text
+     * @private
+     */
     const tip = this.getAttribute("tip");
     // console.log("Tip content", tip);
     const text = shadowRoot.querySelector(".tooltiptext");
