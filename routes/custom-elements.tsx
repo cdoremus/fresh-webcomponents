@@ -1,7 +1,7 @@
 export default function CustomElementsPage() {
   return (
-    <div>
-      <h2>Web Component Custom Elements</h2>
+    <div class="px-4 py-8 mx-auto bg-[#86efac]">
+      <div class="text-3xl font-bold">Web Component Custom Elements</div>
       <div>
         <h3>Greeting Web Component</h3>
         <hello-wc></hello-wc>

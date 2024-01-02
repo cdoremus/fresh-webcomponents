@@ -20,8 +20,8 @@ export default function App({ Component }: AppProps) {
       </head>
       {/* <body class="m-x-5 md:m-x-50 m-y-0 pt-4 mx-auto max-w-screen-lg bg-blue-100"> */}
       <body class="bg-blue-100">
-        <header class="bg-green-500 p-4 flex items-center justify-center bg-blue-100">
-          <div class="font-bold text-4xl">
+        <header class="bg-green-500 p-4 sm:p-2 flex items-center justify-center w-fit">
+          <div class="font-bold text-4xl sm:text-lg">
             Fresh Web Component Demo
           </div>
           <img

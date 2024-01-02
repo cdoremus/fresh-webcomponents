@@ -1,7 +1,7 @@
 export default function ThirdPartyWCPage() {
   return (
-    <div>
-      <h2>Third-party Web Components</h2>
+    <div class="px-4 py-8 mx-auto bg-[#86efac]">
+      <div class="text-3xl font-bold">Third-party Web Components</div>
       <div>
         <h2>Sparkly Text</h2>
         <div style="width:18rem">
