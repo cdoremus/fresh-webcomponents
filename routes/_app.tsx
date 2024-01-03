@@ -20,18 +20,17 @@ export default function App({ Component }: AppProps) {
       </head>
       {/* <body class="m-x-5 md:m-x-50 m-y-0 pt-4 mx-auto max-w-screen-lg bg-blue-100"> */}
       <body class="bg-blue-100">
-        <header class="bg-green-500 p-4 sm:p-2 flex items-center justify-center w-fit">
-          <div class="font-bold text-4xl sm:text-lg">
+        <header>
+          <div class="title">
             Fresh Web Component Demo
           </div>
           <img
-            class="my-6"
             src="/logo.svg"
             width="128"
             height="128"
             alt="the Fresh logo: a sliced lemon dripping with juice"
           />
-          <nav class="flex flex-col border-2 border-solid border-black ml-1.5">
+          <nav>
             <a href="/custom-elements" class="">Custom Elements</a>
             <a href="/lit" class="">Lit Components</a>
             <a href="/third-party" class="">Third-party Components</a>
