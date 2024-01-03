@@ -46,8 +46,6 @@ export default function App({ Component }: AppProps) {
           </a>
           <a href="https://fresh.deno.dev">
             <img
-              width="197"
-              height="37"
               src="https://fresh.deno.dev/fresh-badge.svg"
               alt="Made with Fresh"
             />

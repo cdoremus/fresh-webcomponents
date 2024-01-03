@@ -106,13 +106,34 @@ footer {
     background-color: #e5e7eb;
     text-decoration: none;
     margin: 0.25rem 0.5rem;
-    border: 1px solid black;
+    border: 1px solid #000000;
+    }
+  & img {
+      width: 100%;
+      height: 37px;
+      @media(max-width: 400px) {
+        width: 100px;
+      }
   }
   & .source-text {
     font-size: 1rem;
     font-family: Arial, Helvetica, sans-serif;
     color: black;
-    margin: 0 0.5rem 0.125rem;
+    padding: 0.5rem 0.5rem;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    @media(max-width:400px) {
+      font-size:0.75rem;
+      margin: 0 0.125rem 0.125rem;
+      padding:0;
+    }
+  }
+  @media(max-width:400px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin:auto;
+    padding:0.00125rem;
   }
 }
 .transition-colors {
