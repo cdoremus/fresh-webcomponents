@@ -24,12 +24,14 @@ export default function App({ Component }: AppProps) {
           <div class="title">
             Fresh Web Component Demo
           </div>
-          <img
-            src="/logo.svg"
-            width="128"
-            height="128"
-            alt="the Fresh logo: a sliced lemon dripping with juice"
-          />
+          <div class="fresh-logo">
+            <img
+              src="/logo.svg"
+              width="128"
+              height="128"
+              alt="the Fresh logo: a sliced lemon dripping with juice"
+            />
+          </div>
           <nav>
             <a href="/custom-elements" class="">Custom Elements</a>
             <a href="/lit" class="">Lit Components</a>
