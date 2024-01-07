@@ -1,4 +1,4 @@
-# Deno Fresh Web Components Demo
+# Deno Web Components Demo
 
 This repo demos the use of Components with [Deno](https://deno.com).
 
