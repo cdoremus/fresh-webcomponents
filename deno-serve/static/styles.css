@@ -1,0 +1,46 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+
+body {
+  background-color: lightblue;
+  margin: 5px;
+}
+
+header {
+  background-color: aqua;
+  padding: 1rem;
+  text-align: center;
+}
+
+footer {
+  background-color: aqua;
+  padding: 0.25rem;
+  text-align: center;
+}
+hello-wc {
+  font-size: 1.5rem;
+  color: red;
+}
+
+.container {
+  border: 4px solid black;
+  padding: 0.75rem;
+}
+
+.not-found {
+  display:grid;
+  justify-items: center;
+  align-items: center;
+  font-size: 2.0rem;
+  font-weight:bold;
+  color: blue;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 5px;
+}
