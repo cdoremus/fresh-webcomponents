@@ -33,4 +33,8 @@ const handler = (req: Request) => {
   // });
 };
 
-Deno.serve({ port: 8080 }, handler);
+Deno.serve({ port: 8080 }, (req) =>
+  serveDir(req, {
+    fsRoot: "static",
+    urlRoot: "",
+  }));
