@@ -8,13 +8,16 @@ const handler = (req: Request) => {
   console.log("Pathname", pathname);
 
   if (pathname === "/") {
+    console.log("PATHNAME: ", "/");
     return serveFile(req, "./static/index.html");
   }
 
   if (pathname.startsWith("/")) {
     if (pathname === "/") {
+      console.log("PATHNAME startsWith: ", "/");
       return serveFile(req, "./static/index.html");
     } else if (pathname.includes(".js") || pathname.includes(".css")) {
+      console.log("PATHNAME js or css: ", pathname);
       return serveDir(req, {
         fsRoot: "static",
         urlRoot: "",
@@ -22,6 +25,7 @@ const handler = (req: Request) => {
     }
   }
 
+  console.log("PATHNAME: ", "/static/404.html");
   return serveFile(req, `./static/404.html`);
 
   // return new Response("404: File Not Found", {
