@@ -16,14 +16,14 @@ export default function ThirdPartyWCPage() {
           </sparkly-text>
         </div>
       </div>
-      <div class="w-2/4">
+      <div style="width:100%">
         <h2>Split Window Component</h2>
         <div>
           <two-up>
-            <div style="height: auto">
+            <div>
               <img src="/img/2021.webp" />
             </div>
-            <div style="height: auto">
+            <div>
               <img src="/img/2011.webp" />
             </div>
           </two-up>
