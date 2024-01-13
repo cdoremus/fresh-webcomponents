@@ -19,7 +19,6 @@ export default function ThirdPartyWCPage() {
       <div class="w-2/4">
         <h2>Split Window Component</h2>
         <div>
-          {/* @ts-ignore WC */}
           <two-up>
             <div style="height: auto">
               <img src="/img/2021.webp" />
@@ -27,14 +26,12 @@ export default function ThirdPartyWCPage() {
             <div style="height: auto">
               <img src="/img/2011.webp" />
             </div>
-            {/* @ts-ignore WC */}
           </two-up>
         </div>
       </div>
       <div>
         <h2>Emoji Picker</h2>
         <div>
-          {/* @ts-ignore WC */}
           <emoji-picker-wrapper></emoji-picker-wrapper>
         </div>
         <div id="selected-emoji"></div>

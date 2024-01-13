@@ -23,6 +23,8 @@ declare module "preact" {
       "counter-wc": CounterWCProps;
       "tool-tip": ToolTip;
       "lit-counter": JSX.HTMLAttributes<LitElement>;
+      "two-up": JSX.HTMLAttributes<HTMLElement>;
+      "emoji-picker-wrapper": JSX.HTMLAttributes<HTMLElement>;
     }
   }
 }
