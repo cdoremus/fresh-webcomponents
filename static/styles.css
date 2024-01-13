@@ -246,6 +246,7 @@ emoji-picker-wrapper {
   emoji-picker {
     min-width: 50%;
     @media(max-width:400px) {
+      flex-direction: column-reverse;
       --emoji-size: 1.1rem;
       --emoji-padding: 0.1rem;
       --num-columns: 4;
