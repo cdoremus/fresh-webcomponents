@@ -223,38 +223,14 @@ footer {
 }
 
 /* Third-party WCs*/
-
 two-up {
-  flex: 1;
-  height: 200px;
-}
-.light, .dark {
-  text-align: center;
-  padding: 10px 0 0;
-}
-.dark {
-  background: #555;
-  color: #ccc;
-}
-
-web-accordion-item h3 {
-  background:grey;
-  margin:0;
-  padding:10px;
-  border: 2px solid black;
-  cursor: pointer;
-}
-
-web-accordion-item div {
-  background:lightgray;
-  padding:20px 10px;
-}
-
-web-accordion-item div p {
-  padding:20px 10px;
-}
-
-two-up {
-  display:flex;
-  justify-content: center;
+  height: auto;
+  img {
+    min-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    @media(max-width:400px) {
+      max-width:100%;
+    }
+  }
 }
