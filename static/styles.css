@@ -234,3 +234,10 @@ two-up {
     }
   }
 }
+
+emoji-picker-wrapper {
+  height: auto;
+  @media(max-width:400px) {
+    max-width:100%;
+  }
+}
