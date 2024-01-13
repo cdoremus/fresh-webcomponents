@@ -239,13 +239,16 @@ emoji-picker-wrapper {
   height: auto;
   width: 50%;
   display: flex;
+  flex:1;
   gap: 4px;
   width: 50%;
-  /* border: 2px solid black; */
-  /* border-radius: 10px;
-  margin: 10px 5px;
-  padding: 5px 10px; */
-  @media(max-width:400px) {
-    max-width:100%;
+
+  emoji-picker {
+    min-width: 50%;
+    @media(max-width:400px) {
+      --emoji-size: 1.1rem;
+      --emoji-padding: 0.1rem;
+      --num-columns: 4;
+    }
   }
 }
