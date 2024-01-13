@@ -6,13 +6,11 @@ export default function ThirdPartyWCPage() {
       <div>
         <h2>Sparkly Text</h2>
         <div style="width:18rem">
-          {/* @ts-ignore WC */}
           <sparkly-text
             number-of-sparkles="10"
             style="--sparkly-text-color: yellow"
           >
             <p>This text should sparkle</p>
-            {/* @ts-ignore WC */}
           </sparkly-text>
         </div>
       </div>
