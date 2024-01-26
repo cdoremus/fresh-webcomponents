@@ -2,17 +2,17 @@ export default function LitPage() {
   return (
     <div class="px-4 py-8 mx-auto bg-[#86efac]">
       <div>
-        <div class="text-3xl font-bold">Lit Web Components</div>
+        <div class="text-4xl font-bold">Lit Web Components</div>
+        <hr />
         <div>
           <h2>Greeting Component</h2>
-          {/* @ts-ignore lit wc */}
-          <my-lit-element></my-lit-element>
+          <my-lit-message message="Greetings from a custom element!">
+          </my-lit-message>
         </div>
       </div>
       <div>
         <h2>Custom Alert Web Component</h2>
-        {/* @ts-ignore lit wc */}
-        <custom-alert>This is a dismissable message</custom-alert>
+        <custom-alert>This is a dismissible message</custom-alert>
       </div>
     </div>
   );

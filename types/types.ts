@@ -19,6 +19,10 @@ interface ToolTip extends JSX.HTMLAttributes<HTMLElement> {
 interface SparklyText extends JSX.HTMLAttributes<HTMLElement> {
   "number-of-sparkles": string;
 }
+
+interface MyLitMessage extends JSX.HTMLAttributes<LitElement> {
+  message: string;
+}
 declare module "preact" {
   namespace JSX {
     interface IntrinsicElements {
@@ -26,6 +30,8 @@ declare module "preact" {
       "counter-wc": CounterWCProps;
       "tool-tip": ToolTip;
       "lit-counter": JSX.HTMLAttributes<LitElement>;
+      "my-lit-message": MyLitMessage;
+      "custom-alert": JSX.HTMLAttributes<LitElement>;
       "sparkly-text": SparklyText;
       "two-up": JSX.HTMLAttributes<HTMLElement>;
       "emoji-picker-wrapper": JSX.HTMLAttributes<HTMLElement>;

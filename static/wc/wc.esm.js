@@ -605,32 +605,33 @@ var l2 = globalThis.litElementPolyfillSupport;
 l2?.({ LitElement: t });
 (globalThis.litElementVersions ??= []).push("4.0.2");
 
-// components/wc/MyLitWC.ts
-var MyLitElement = class extends t {
+// components/wc/MyLitMessage.ts
+var MyLitMessage = class extends t {
   // @property()
+  // Properties are the component attributes
   static get properties() {
     return {
-      version: ""
+      message: ""
     };
   }
-  // version = "";
   static get styles() {
-    return v`.title {color:red}`;
+    return [
+      v`p {font-weight: bold }`,
+      v`.message {color:red}`
+    ];
   }
   constructor() {
     super();
-    this.version = "Starting List";
   }
   render() {
     return X`
-    <p class="title">Welcome to the Lit tutorial!</p>
-    <p>This is the ${this.version} code.</p>
+    <p>The message: <span class="message">${this.message}</span></p>
     `;
   }
 };
 customElements.define(
-  "my-lit-element",
-  MyLitElement
+  "my-lit-message",
+  MyLitMessage
 );
 
 // components/wc/LitCounter.js
@@ -826,7 +827,7 @@ customElements.define("tool-tip", ToolTipWC);
 export {
   CustomAlert,
   LitCounter,
-  MyLitElement
+  MyLitMessage
 };
 /*! Bundled license information:
 
