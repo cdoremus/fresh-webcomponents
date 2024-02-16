@@ -1,18 +1,11 @@
 # Deno Web Components Demo
 
-This repo demos the use of Components with [Deno](https://deno.com).
+This repo demos the use of Web Components with [Deno](https://deno.com). It
+serves all components using [Deno Fresh](https://fresh.deno.dev).
 
 ### Usage
 
 Make sure to install Deno: https://deno.land/manual/getting_started/installation
-
-### Deno Fresh
-
-Move into the `fresh` folder:
-
-```
-cd fresh
-```
 
 Start the project:
 
@@ -20,4 +13,6 @@ Start the project:
 deno task dev
 ```
 
-This will watch the project directory and restart as necessary.
+The `dev` task runs a build that uses esbuild to convert the TypeScript files to
+JavaScript and bundles them into a `wc.esm.js` file in the `static/wc` folder
+and then starts the Fresh server.
