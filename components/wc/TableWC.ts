@@ -38,4 +38,4 @@ class MYTable extends HTMLElement {
     `;
   }
 }
-customElements.define("my-table", MYTable);
+customElements.define("data-table", MYTable);
