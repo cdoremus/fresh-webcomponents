@@ -45,6 +45,7 @@ interface SparklyText extends JSX.HTMLAttributes<HTMLElement> {
 interface MyLitMessage extends JSX.HTMLAttributes<LitElement> {
   message: string;
 }
+
 declare module "preact" {
   namespace JSX {
     interface IntrinsicElements {
@@ -58,6 +59,7 @@ declare module "preact" {
       "sparkly-text": SparklyText;
       "two-up": JSX.HTMLAttributes<HTMLElement>;
       "emoji-picker-wrapper": JSX.HTMLAttributes<HTMLElement>;
+      "search-form": JSX.HTMLAttributes<LitElement>;
     }
   }
 }

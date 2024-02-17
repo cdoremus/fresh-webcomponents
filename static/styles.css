@@ -125,6 +125,7 @@ footer {
       padding:0;
     }
   }
+
   @media(max-width:400px) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -137,6 +138,11 @@ footer {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
+
+hr {
+  margin:0.5em;
+}
+
 .my-6 {
   margin-bottom: 1.5rem;
   margin-top: 1.5rem;

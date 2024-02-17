@@ -24,6 +24,7 @@ export default function CustomElementsPage(
         <h3>Greeting Web Component</h3>
         <hello-wc></hello-wc>
       </div>
+      <hr />
       <div>
         <h2>Tool Tip Demo</h2>
         <div>
@@ -31,10 +32,18 @@ export default function CustomElementsPage(
           <tool-tip tip="The tooltip text">Text that needs a tooltip</tool-tip>
         </div>
       </div>
+      <hr />
       <div>
         <h2>Table Web Component Demo</h2>
         <div>
           <data-table data-feed={JSON.stringify(tableData)}></data-table>
+        </div>
+      </div>
+      <hr />
+      <div>
+        <h2>Form Web Component Demo</h2>
+        <div>
+          <search-form></search-form>
         </div>
       </div>
     </div>

@@ -5,6 +5,7 @@
 import * as $_404 from "./routes/_404.tsx";
 import * as $_app from "./routes/_app.tsx";
 import * as $custom_elements from "./routes/custom-elements.tsx";
+import * as $form_processor from "./routes/form-processor.tsx";
 import * as $greet_name_ from "./routes/greet/[name].tsx";
 import * as $index from "./routes/index.tsx";
 import * as $lit from "./routes/lit.tsx";
@@ -18,6 +19,7 @@ const manifest = {
     "./routes/_404.tsx": $_404,
     "./routes/_app.tsx": $_app,
     "./routes/custom-elements.tsx": $custom_elements,
+    "./routes/form-processor.tsx": $form_processor,
     "./routes/greet/[name].tsx": $greet_name_,
     "./routes/index.tsx": $index,
     "./routes/lit.tsx": $lit,

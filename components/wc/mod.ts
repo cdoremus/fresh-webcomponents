@@ -6,3 +6,4 @@ export * from "./LitAlertWC.ts";
 export * from "./EmojiPickerWrapper.js";
 export * from "./ToolTipWC.ts";
 export * from "./TableWC.ts";
+export * from "./FormWC.ts";
