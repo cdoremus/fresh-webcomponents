@@ -1,12 +1,12 @@
-const template = document.createElement("template");
-template!.innerHTML = `
-  <div class="container">
-    <span id="title">This is inside the template</span>
-    <slot></slot>
-    <slot name="slot2"></slot>
-    <slot name="slot3"></slot>
-  </div>
-`;
+// const template = document.createElement("template");
+// template!.innerHTML = `
+//   <div class="container">
+//     <span id="title">This is inside the template</span>
+//     <slot></slot>
+//     <slot name="slot2"></slot>
+//     <slot name="slot3"></slot>
+//   </div>
+// `;
 
 export class TemplatedWC extends HTMLElement {
   css = `
@@ -25,13 +25,11 @@ export class TemplatedWC extends HTMLElement {
     }
   `;
   connectedCallback() {
-    console.log("HERE");
     const shadow = this.attachShadow({ mode: "open" });
-    // const template = shadow.querySelector("template");
-    // const templateContent = template!.content;
-    // console.log("template content", templateContent);
+    const template = document.querySelector("#template-wc");
     shadow.innerHTML = `<style>${this.css}</style>`;
-    shadow.appendChild(template.content.cloneNode(true));
+    // @ts-ignore bad error: "content does not exist on type element"
+    shadow.appendChild(template!.content.cloneNode(true));
     // this.innerHTML = template!.content.toString();
   }
 }

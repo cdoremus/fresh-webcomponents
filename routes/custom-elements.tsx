@@ -51,9 +51,15 @@ export default function CustomElementsPage(
         <h3>Web Component that uses a Template and Slots</h3>
         <div>
           <templated-wc>
-            <div>Slotted content1</div>
-            <div slot="slot2">Slotted content2</div>
+            {/* Needed to add 'template' to JSX.IntrinsicElements in types/types.ts to fix error */}
+            <template id="template-wc">
+              <slot></slot>
+              <slot name="slot2"></slot>
+              <slot name="slot3"></slot>
+            </template>
             <div slot="slot3">Slotted content3</div>
+            <div slot="slot2">Slotted content2</div>
+            <div>Slotted content1</div>
           </templated-wc>
         </div>
       </div>

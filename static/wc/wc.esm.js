@@ -886,15 +886,6 @@ var FormWC = class extends HTMLElement {
 customElements.define("search-form", FormWC);
 
 // components/wc/TemplatedWC.ts
-var template2 = document.createElement("template");
-template2.innerHTML = `
-  <div class="container">
-    <span id="title">This is inside the template</span>
-    <slot></slot>
-    <slot name="slot2"></slot>
-    <slot name="slot3"></slot>
-  </div>
-`;
 var TemplatedWC = class extends HTMLElement {
   css = `
     div.container {
@@ -912,8 +903,8 @@ var TemplatedWC = class extends HTMLElement {
     }
   `;
   connectedCallback() {
-    console.log("HERE");
     const shadow = this.attachShadow({ mode: "open" });
+    const template2 = document.querySelector("#template-wc");
     shadow.innerHTML = `<style>${this.css}</style>`;
     shadow.appendChild(template2.content.cloneNode(true));
   }

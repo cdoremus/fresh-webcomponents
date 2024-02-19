@@ -1,10 +1,11 @@
 /**
- * Definitions of web component types
+ * Definitions of web component types with emphasis on extending JSX.IntrinsicElements.
  */
 import { JSX } from "preact";
 import { LitElement } from "https://esm.sh/lit@3.1.0";
 import { TableDataItem } from "../components/wc/TableWC.ts";
 
+// This is used to specify the type that is the result of JSON.stringify()
 declare class Stringified<T> extends String {
   private ___stringified: T;
 }
@@ -49,18 +50,24 @@ interface MyLitMessage extends JSX.HTMLAttributes<LitElement> {
 declare module "preact" {
   namespace JSX {
     interface IntrinsicElements {
+      // This fixes "Property 'template' does not exist on JSX.IntrinsicElements" error
+      "template": JSX.HTMLAttributes<HTMLTemplateElement>;
+      // Web components below
+      //  These are custom elements with attributes defined above
       "hello-wc": HelloWCProps;
       "counter-wc": CounterWCProps;
       "tool-tip": ToolTip;
       "data-table": TableWC;
-      "lit-counter": JSX.HTMLAttributes<LitElement>;
       "my-lit-message": MyLitMessage;
-      "custom-alert": JSX.HTMLAttributes<LitElement>;
       "sparkly-text": SparklyText;
+      //  These are custom elements without attributes
       "two-up": JSX.HTMLAttributes<HTMLElement>;
       "emoji-picker-wrapper": JSX.HTMLAttributes<HTMLElement>;
+      "templated-wc": JSX.HTMLAttributes<HTMLElement>;
+      //  These are Lit custom elements
       "search-form": JSX.HTMLAttributes<LitElement>;
-      "templated-wc": JSX.HTMLAttributes<LitElement>;
+      "lit-counter": JSX.HTMLAttributes<LitElement>;
+      "custom-alert": JSX.HTMLAttributes<LitElement>;
     }
   }
 }
