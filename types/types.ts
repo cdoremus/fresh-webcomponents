@@ -60,6 +60,7 @@ declare module "preact" {
       "two-up": JSX.HTMLAttributes<HTMLElement>;
       "emoji-picker-wrapper": JSX.HTMLAttributes<HTMLElement>;
       "search-form": JSX.HTMLAttributes<LitElement>;
+      "templated-wc": JSX.HTMLAttributes<LitElement>;
     }
   }
 }

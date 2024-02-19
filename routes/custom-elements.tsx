@@ -26,7 +26,7 @@ export default function CustomElementsPage(
       </div>
       <hr />
       <div>
-        <h2>Tool Tip Demo</h2>
+        <h3>Tool Tip Demo</h3>
         <div>
           <span class="text-xl bold">Hover over this:</span>{" "}
           <tool-tip tip="The tooltip text">Text that needs a tooltip</tool-tip>
@@ -34,16 +34,27 @@ export default function CustomElementsPage(
       </div>
       <hr />
       <div>
-        <h2>Table Web Component Demo</h2>
+        <h3>Table Web Component Demo</h3>
         <div>
           <data-table data-feed={JSON.stringify(tableData)}></data-table>
         </div>
       </div>
       <hr />
       <div>
-        <h2>Form Web Component Demo</h2>
+        <h3>Form Web Component Demo</h3>
         <div>
           <search-form></search-form>
+        </div>
+      </div>
+      <hr />
+      <div>
+        <h3>Web Component that uses a Template and Slots</h3>
+        <div>
+          <templated-wc>
+            <div>Slotted content1</div>
+            <div slot="slot2">Slotted content2</div>
+            <div slot="slot3">Slotted content3</div>
+          </templated-wc>
         </div>
       </div>
     </div>
