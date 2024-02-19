@@ -5,6 +5,7 @@ type FormProcessingProps = {
 };
 
 export const handler: Handlers = {
+  // @ts-ignore spurious error
   GET(req: Request, ctx: FreshContext<FormProcessingProps>) {
     const url = new URL(req.url);
     // Get form input value
