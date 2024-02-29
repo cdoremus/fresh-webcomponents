@@ -47,6 +47,9 @@ interface MyLitMessage extends JSX.HTMLAttributes<LitElement> {
   message: string;
 }
 
+interface UsingNpmLib extends JSX.HTMLAttributes<HTMLElement> {
+  "token"?: string;
+}
 declare module "preact" {
   namespace JSX {
     interface IntrinsicElements {
@@ -60,6 +63,7 @@ declare module "preact" {
       "data-table": TableWC;
       "my-lit-message": MyLitMessage;
       "sparkly-text": SparklyText;
+      "using-npm-lib": UsingNpmLib;
       //  These are custom elements without attributes
       "two-up": JSX.HTMLAttributes<HTMLElement>;
       "emoji-picker-wrapper": JSX.HTMLAttributes<HTMLElement>;

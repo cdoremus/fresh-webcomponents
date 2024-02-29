@@ -65,9 +65,8 @@ export default function CustomElementsPage(
         <hr />
       </div>
       <div>
-        <h3>Web Component that Uses amd npm Library</h3>
+        <h3>Web Component that Uses an npm Library</h3>
         <div>
-          {/* @ts-ignore */}
           <using-npm-lib></using-npm-lib>
         </div>
       </div>
