@@ -62,6 +62,14 @@ export default function CustomElementsPage(
             <div>Slotted content1</div>
           </templated-wc>
         </div>
+        <hr />
+      </div>
+      <div>
+        <h3>Web Component that Uses amd npm Library</h3>
+        <div>
+          {/* @ts-ignore */}
+          <using-npm-lib></using-npm-lib>
+        </div>
       </div>
     </div>
   );

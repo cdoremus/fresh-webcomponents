@@ -64,13 +64,13 @@ var h = class {
 };
 var m = (r) => new h(typeof r == "string" ? r : r + "", void 0, f);
 var v = (r, ...t2) => {
-  let e = r.length === 1 ? r[0] : t2.reduce((s, i, o3) => s + ((n) => {
+  let e = r.length === 1 ? r[0] : t2.reduce((s, i, o4) => s + ((n) => {
     if (n._$cssResult$ === true)
       return n.cssText;
     if (typeof n == "number")
       return n;
     throw Error("Value passed to 'css' function must be a 'css' function result: " + n + ". Use 'unsafeCSS' to pass non-literal values, but take care to ensure page security.");
-  })(i) + r[o3 + 1], r[0]);
+  })(i) + r[o4 + 1], r[0]);
   return new h(e, r, f);
 };
 var S = (r, t2) => {
@@ -140,7 +140,7 @@ var a = class extends HTMLElement {
     }
   }
   static getPropertyDescriptor(t2, e, s) {
-    let { get: i, set: o3 } = C(this.prototype, t2) ?? { get() {
+    let { get: i, set: o4 } = C(this.prototype, t2) ?? { get() {
       return this[e];
     }, set(n) {
       this[e] = n;
@@ -149,7 +149,7 @@ var a = class extends HTMLElement {
       return i?.call(this);
     }, set(n) {
       let b2 = i?.call(this);
-      o3.call(this, n), this.requestUpdate(t2, b2, s);
+      o4.call(this, n), this.requestUpdate(t2, b2, s);
     }, configurable: true, enumerable: true };
   }
   static getPropertyOptions(t2) {
@@ -233,20 +233,20 @@ var a = class extends HTMLElement {
   _$EO(t2, e) {
     let s = this.constructor.elementProperties.get(t2), i = this.constructor._$Eu(t2, s);
     if (i !== void 0 && s.reflect === true) {
-      let o3 = (s.converter?.toAttribute !== void 0 ? s.converter : y).toAttribute(e, s.type);
-      this._$Em = t2, o3 == null ? this.removeAttribute(i) : this.setAttribute(i, o3), this._$Em = null;
+      let o4 = (s.converter?.toAttribute !== void 0 ? s.converter : y).toAttribute(e, s.type);
+      this._$Em = t2, o4 == null ? this.removeAttribute(i) : this.setAttribute(i, o4), this._$Em = null;
     }
   }
   _$AK(t2, e) {
     let s = this.constructor, i = s._$Eh.get(t2);
     if (i !== void 0 && this._$Em !== i) {
-      let o3 = s.getPropertyOptions(i), n = typeof o3.converter == "function" ? { fromAttribute: o3.converter } : o3.converter?.fromAttribute !== void 0 ? o3.converter : y;
-      this._$Em = i, this[i] = n.fromAttribute(e, o3.type), this._$Em = null;
+      let o4 = s.getPropertyOptions(i), n = typeof o4.converter == "function" ? { fromAttribute: o4.converter } : o4.converter?.fromAttribute !== void 0 ? o4.converter : y;
+      this._$Em = i, this[i] = n.fromAttribute(e, o4.type), this._$Em = null;
     }
   }
-  requestUpdate(t2, e, s, i = false, o3) {
+  requestUpdate(t2, e, s, i = false, o4) {
     if (t2 !== void 0) {
-      if (s ??= this.constructor.getPropertyOptions(t2), !(s.hasChanged ?? g)(i ? o3 : this[t2], e))
+      if (s ??= this.constructor.getPropertyOptions(t2), !(s.hasChanged ?? g)(i ? o4 : this[t2], e))
         return;
       this.C(t2, e, s);
     }
@@ -273,14 +273,14 @@ var a = class extends HTMLElement {
       return;
     if (!this.hasUpdated) {
       if (this.renderRoot ??= this.createRenderRoot(), this._$Ep) {
-        for (let [i, o3] of this._$Ep)
-          this[i] = o3;
+        for (let [i, o4] of this._$Ep)
+          this[i] = o4;
         this._$Ep = void 0;
       }
       let s = this.constructor.elementProperties;
       if (s.size > 0)
-        for (let [i, o3] of s)
-          o3.wrapped !== true || this._$AL.has(i) || this[i] === void 0 || this.C(i, this[i], o3);
+        for (let [i, o4] of s)
+          o4.wrapped !== true || this._$AL.has(i) || this[i] === void 0 || this.C(i, this[i], o4);
     }
     let t2 = false, e = this._$AL;
     try {
@@ -320,16 +320,16 @@ a.elementStyles = [], a.shadowRootOptions = { mode: "open" }, a[c("elementProper
 // https://esm.sh/v134/lit-html@3.1.0/denonext/lit-html.mjs
 var U2 = globalThis;
 var M = U2.trustedTypes;
-var L = M ? M.createPolicy("lit-html", { createHTML: (o3) => o3 }) : void 0;
+var L = M ? M.createPolicy("lit-html", { createHTML: (o4) => o4 }) : void 0;
 var O2 = "$lit$";
 var d2 = `lit$${(Math.random() + "").slice(9)}$`;
 var R2 = "?" + d2;
 var K = `<${R2}>`;
 var v2 = document;
 var H = () => v2.createComment("");
-var N = (o3) => o3 === null || typeof o3 != "object" && typeof o3 != "function";
+var N = (o4) => o4 === null || typeof o4 != "object" && typeof o4 != "function";
 var z = Array.isArray;
-var Z = (o3) => z(o3) || typeof o3?.[Symbol.iterator] == "function";
+var Z = (o4) => z(o4) || typeof o4?.[Symbol.iterator] == "function";
 var P2 = `[ 	
 \f\r]`;
 var x = /<(?:(!--|\/[^a-zA-Z])|(\/?[a-zA-Z][^>\s]*)|(\/?$))/g;
@@ -340,63 +340,63 @@ var u2 = RegExp(`>|${P2}(?:([^\\s"'>=/]+)(${P2}*=${P2}*(?:[^
 var D = /'/g;
 var V = /"/g;
 var q = /^(?:script|style|textarea|title)$/i;
-var F = (o3) => (t2, ...s) => ({ _$litType$: o3, strings: t2, values: s });
+var F = (o4) => (t2, ...s) => ({ _$litType$: o4, strings: t2, values: s });
 var X = F(1);
 var Y = F(2);
 var b = Symbol.for("lit-noChange");
 var A2 = Symbol.for("lit-nothing");
 var j = /* @__PURE__ */ new WeakMap();
 var g2 = v2.createTreeWalker(v2, 129);
-function G(o3, t2) {
-  if (!Array.isArray(o3) || !o3.hasOwnProperty("raw"))
+function G(o4, t2) {
+  if (!Array.isArray(o4) || !o4.hasOwnProperty("raw"))
     throw Error("invalid template strings array");
   return L !== void 0 ? L.createHTML(t2) : t2;
 }
-var J = (o3, t2) => {
-  let s = o3.length - 1, e = [], i, n = t2 === 2 ? "<svg>" : "", r = x;
-  for (let _2 = 0; _2 < s; _2++) {
-    let h2 = o3[_2], $2, a2, l3 = -1, c2 = 0;
-    for (; c2 < h2.length && (r.lastIndex = c2, a2 = r.exec(h2), a2 !== null); )
+var J = (o4, t2) => {
+  let s = o4.length - 1, e = [], i, n = t2 === 2 ? "<svg>" : "", r = x;
+  for (let _3 = 0; _3 < s; _3++) {
+    let h3 = o4[_3], $2, a2, l3 = -1, c2 = 0;
+    for (; c2 < h3.length && (r.lastIndex = c2, a2 = r.exec(h3), a2 !== null); )
       c2 = r.lastIndex, r === x ? a2[1] === "!--" ? r = W : a2[1] !== void 0 ? r = k : a2[2] !== void 0 ? (q.test(a2[2]) && (i = RegExp("</" + a2[2], "g")), r = u2) : a2[3] !== void 0 && (r = u2) : r === u2 ? a2[0] === ">" ? (r = i ?? x, l3 = -1) : a2[1] === void 0 ? l3 = -2 : (l3 = r.lastIndex - a2[2].length, $2 = a2[1], r = a2[3] === void 0 ? u2 : a2[3] === '"' ? V : D) : r === V || r === D ? r = u2 : r === W || r === k ? r = x : (r = u2, i = void 0);
-    let p2 = r === u2 && o3[_2 + 1].startsWith("/>") ? " " : "";
-    n += r === x ? h2 + K : l3 >= 0 ? (e.push($2), h2.slice(0, l3) + O2 + h2.slice(l3) + d2 + p2) : h2 + d2 + (l3 === -2 ? _2 : p2);
+    let p2 = r === u2 && o4[_3 + 1].startsWith("/>") ? " " : "";
+    n += r === x ? h3 + K : l3 >= 0 ? (e.push($2), h3.slice(0, l3) + O2 + h3.slice(l3) + d2 + p2) : h3 + d2 + (l3 === -2 ? _3 : p2);
   }
-  return [G(o3, n + (o3[s] || "<?>") + (t2 === 2 ? "</svg>" : "")), e];
+  return [G(o4, n + (o4[s] || "<?>") + (t2 === 2 ? "</svg>" : "")), e];
 };
 var C2 = class o {
   constructor({ strings: t2, _$litType$: s }, e) {
     let i;
     this.parts = [];
-    let n = 0, r = 0, _2 = t2.length - 1, h2 = this.parts, [$2, a2] = J(t2, s);
+    let n = 0, r = 0, _3 = t2.length - 1, h3 = this.parts, [$2, a2] = J(t2, s);
     if (this.el = o.createElement($2, e), g2.currentNode = this.el.content, s === 2) {
       let l3 = this.el.content.firstChild;
       l3.replaceWith(...l3.childNodes);
     }
-    for (; (i = g2.nextNode()) !== null && h2.length < _2; ) {
+    for (; (i = g2.nextNode()) !== null && h3.length < _3; ) {
       if (i.nodeType === 1) {
         if (i.hasAttributes())
           for (let l3 of i.getAttributeNames())
             if (l3.endsWith(O2)) {
               let c2 = a2[r++], p2 = i.getAttribute(l3).split(d2), T2 = /([.?@])?(.*)/.exec(c2);
-              h2.push({ type: 1, index: n, name: T2[2], strings: p2, ctor: T2[1] === "." ? E2 : T2[1] === "?" ? S2 : T2[1] === "@" ? I : m2 }), i.removeAttribute(l3);
+              h3.push({ type: 1, index: n, name: T2[2], strings: p2, ctor: T2[1] === "." ? E2 : T2[1] === "?" ? S2 : T2[1] === "@" ? I : m2 }), i.removeAttribute(l3);
             } else
-              l3.startsWith(d2) && (h2.push({ type: 6, index: n }), i.removeAttribute(l3));
+              l3.startsWith(d2) && (h3.push({ type: 6, index: n }), i.removeAttribute(l3));
         if (q.test(i.tagName)) {
           let l3 = i.textContent.split(d2), c2 = l3.length - 1;
           if (c2 > 0) {
             i.textContent = M ? M.emptyScript : "";
             for (let p2 = 0; p2 < c2; p2++)
-              i.append(l3[p2], H()), g2.nextNode(), h2.push({ type: 2, index: ++n });
+              i.append(l3[p2], H()), g2.nextNode(), h3.push({ type: 2, index: ++n });
             i.append(l3[c2], H());
           }
         }
       } else if (i.nodeType === 8)
         if (i.data === R2)
-          h2.push({ type: 2, index: n });
+          h3.push({ type: 2, index: n });
         else {
           let l3 = -1;
           for (; (l3 = i.data.indexOf(d2, l3 + 1)) !== -1; )
-            h2.push({ type: 7, index: n }), l3 += d2.length - 1;
+            h3.push({ type: 7, index: n }), l3 += d2.length - 1;
         }
       n++;
     }
@@ -406,11 +406,11 @@ var C2 = class o {
     return e.innerHTML = t2, e;
   }
 };
-function f2(o3, t2, s = o3, e) {
+function f2(o4, t2, s = o4, e) {
   if (t2 === b)
     return t2;
   let i = e !== void 0 ? s._$Co?.[e] : s._$Cl, n = N(t2) ? void 0 : t2._$litDirective$;
-  return i?.constructor !== n && (i?._$AO?.(false), n === void 0 ? i = void 0 : (i = new n(o3), i._$AT(o3, s, e)), e !== void 0 ? (s._$Co ??= [])[e] = i : s._$Cl = i), i !== void 0 && (t2 = f2(o3, i._$AS(o3, t2.values), i, e)), t2;
+  return i?.constructor !== n && (i?._$AO?.(false), n === void 0 ? i = void 0 : (i = new n(o4), i._$AT(o4, s, e)), e !== void 0 ? (s._$Co ??= [])[e] = i : s._$Cl = i), i !== void 0 && (t2 = f2(o4, i._$AS(o4, t2.values), i, e)), t2;
 }
 var w2 = class {
   constructor(t2, s) {
@@ -425,13 +425,13 @@ var w2 = class {
   u(t2) {
     let { el: { content: s }, parts: e } = this._$AD, i = (t2?.creationScope ?? v2).importNode(s, true);
     g2.currentNode = i;
-    let n = g2.nextNode(), r = 0, _2 = 0, h2 = e[0];
-    for (; h2 !== void 0; ) {
-      if (r === h2.index) {
+    let n = g2.nextNode(), r = 0, _3 = 0, h3 = e[0];
+    for (; h3 !== void 0; ) {
+      if (r === h3.index) {
         let $2;
-        h2.type === 2 ? $2 = new y2(n, n.nextSibling, this, t2) : h2.type === 1 ? $2 = new h2.ctor(n, h2.name, h2.strings, this, t2) : h2.type === 6 && ($2 = new B(n, this, t2)), this._$AV.push($2), h2 = e[++_2];
+        h3.type === 2 ? $2 = new y2(n, n.nextSibling, this, t2) : h3.type === 1 ? $2 = new h3.ctor(n, h3.name, h3.strings, this, t2) : h3.type === 6 && ($2 = new B(n, this, t2)), this._$AV.push($2), h3 = e[++_3];
       }
-      r !== h2?.index && (n = g2.nextNode(), r++);
+      r !== h3?.index && (n = g2.nextNode(), r++);
     }
     return g2.currentNode = v2, i;
   }
@@ -515,9 +515,9 @@ var m2 = class {
     if (n === void 0)
       t2 = f2(this, t2, s, 0), r = !N(t2) || t2 !== this._$AH && t2 !== b, r && (this._$AH = t2);
     else {
-      let _2 = t2, h2, $2;
-      for (t2 = n[0], h2 = 0; h2 < n.length - 1; h2++)
-        $2 = f2(this, _2[e + h2], s, h2), $2 === b && ($2 = this._$AH[h2]), r ||= !N($2) || $2 !== this._$AH[h2], $2 === A2 ? t2 = A2 : t2 !== A2 && (t2 += ($2 ?? "") + n[h2 + 1]), this._$AH[h2] = $2;
+      let _3 = t2, h3, $2;
+      for (t2 = n[0], h3 = 0; h3 < n.length - 1; h3++)
+        $2 = f2(this, _3[e + h3], s, h3), $2 === b && ($2 = this._$AH[h3]), r ||= !N($2) || $2 !== this._$AH[h3], $2 === A2 ? t2 = A2 : t2 !== A2 && (t2 += ($2 ?? "") + n[h3 + 1]), this._$AH[h3] = $2;
     }
     r && !i && this.O(t2);
   }
@@ -568,13 +568,13 @@ var B = class {
 };
 var Q = U2.litHtmlPolyfillSupport;
 Q?.(C2, y2), (U2.litHtmlVersions ??= []).push("3.1.0");
-var et = (o3, t2, s) => {
+var et = (o4, t2, s) => {
   let e = s?.renderBefore ?? t2, i = e._$litPart$;
   if (i === void 0) {
     let n = s?.renderBefore ?? null;
     e._$litPart$ = i = new y2(t2.insertBefore(H(), n), n, void 0, s ?? {});
   }
-  return i._$AI(o3), i;
+  return i._$AI(o4), i;
 };
 
 // https://esm.sh/v134/lit-element@4.0.2/denonext/lit-element.js
@@ -910,6 +910,134 @@ var TemplatedWC = class extends HTMLElement {
   }
 };
 customElements.define("templated-wc", TemplatedWC);
+
+// https://esm.sh/v135/change-case@5.4.3/denonext/change-case.mjs
+var E3 = /([\p{Ll}\d])(\p{Lu})/gu;
+var P3 = /(\p{Lu})([\p{Lu}][\p{Ll}])/gu;
+var w3 = /(\d)\p{Ll}|(\p{L})\d/u;
+var R3 = /[^\p{L}\d]+/giu;
+var d3 = "$1\0$2";
+var C3 = "";
+function h2(r) {
+  let e = r.trim();
+  e = e.replace(E3, d3).replace(P3, d3), e = e.replace(R3, "\0");
+  let t2 = 0, c2 = e.length;
+  for (; e.charAt(t2) === "\0"; )
+    t2++;
+  if (t2 === c2)
+    return [];
+  for (; e.charAt(c2 - 1) === "\0"; )
+    c2--;
+  return e.slice(t2, c2).split(/\0/g);
+}
+function A3(r) {
+  let e = h2(r);
+  for (let t2 = 0; t2 < e.length; t2++) {
+    let c2 = e[t2], n = w3.exec(c2);
+    if (n) {
+      let a2 = n.index + (n[1] ?? n[2]).length;
+      e.splice(t2, 1, c2.slice(0, a2), c2.slice(a2));
+    }
+  }
+  return e;
+}
+function x2(r, e) {
+  let [t2, c2, n] = o3(r, e);
+  return t2 + c2.map(u3(e?.locale)).join(e?.delimiter ?? " ") + n;
+}
+function g3(r, e) {
+  let [t2, c2, n] = o3(r, e), a2 = u3(e?.locale), s = f3(e?.locale), i = e?.mergeAmbiguousCharacters ? m3(a2, s) : _2(a2, s);
+  return t2 + c2.map((l3, p2) => p2 === 0 ? a2(l3) : i(l3, p2)).join(e?.delimiter ?? "") + n;
+}
+function S3(r, e) {
+  let [t2, c2, n] = o3(r, e), a2 = u3(e?.locale), s = f3(e?.locale), i = e?.mergeAmbiguousCharacters ? m3(a2, s) : _2(a2, s);
+  return t2 + c2.map(i).join(e?.delimiter ?? "") + n;
+}
+function I2(r, e) {
+  return x2(r, { delimiter: "-", ...e });
+}
+function k2(r, e) {
+  return x2(r, { delimiter: "_", ...e });
+}
+function u3(r) {
+  return r === false ? (e) => e.toLowerCase() : (e) => e.toLocaleLowerCase(r);
+}
+function f3(r) {
+  return r === false ? (e) => e.toUpperCase() : (e) => e.toLocaleUpperCase(r);
+}
+function m3(r, e) {
+  return (t2) => `${e(t2[0])}${r(t2.slice(1))}`;
+}
+function _2(r, e) {
+  return (t2, c2) => {
+    let n = t2[0];
+    return (c2 > 0 && n >= "0" && n <= "9" ? "_" + n : e(n)) + r(t2.slice(1));
+  };
+}
+function o3(r, e = {}) {
+  let t2 = e.split ?? (e.separateNumbers ? A3 : h2), c2 = e.prefixCharacters ?? C3, n = e.suffixCharacters ?? C3, a2 = 0, s = r.length;
+  for (; a2 < r.length; ) {
+    let i = r.charAt(a2);
+    if (!c2.includes(i))
+      break;
+    a2++;
+  }
+  for (; s > a2; ) {
+    let i = s - 1, l3 = r.charAt(i);
+    if (!n.includes(l3))
+      break;
+    s = i;
+  }
+  return [r.slice(0, a2), t2(r.slice(a2, s)), r.slice(s)];
+}
+
+// components/wc/UsingNpmLib.js
+var UsingNpmLib = class extends HTMLElement {
+  connectedCallback() {
+    this.token = this.getAttribute("token") ?? "";
+    this.innerHTML = `
+      <h4>Casing a String using npm library change-case via esm.sh</h4>
+      <input type="text" value="${this.token}" placeholder="Enter something"/>
+      <h5>Original Case: <span class="token">${this.token}<span></h5>
+      <div>Camel Case: <span class="camel">${g3(this.token)}</span></div>
+      <div>Kebab Case: <span class="kebab">${I2(this.token)}</span></div>
+      <div>Pascal Case: <span class="pascal">${S3(this.token)}</span></div>
+      <div>Snake Case: <span class="snake">${k2(this.token)}</span></div>
+    `;
+    this.querySelector("input").addEventListener("change", (e) => {
+      this.renderChanges(e.target.value);
+    });
+  }
+  renderChanges(change) {
+    console.log("change: ", change);
+    const spanNodes = this.querySelectorAll("span");
+    const spans = Array.from(spanNodes);
+    for (const span of spans) {
+      const className = span.className;
+      if (className) {
+        const el = this.querySelector(`span.${className}`);
+        switch (className) {
+          case "token":
+            el.innerHTML = change;
+            break;
+          case "camel":
+            el.innerHTML = g3(change);
+            break;
+          case "kebab":
+            el.innerHTML = I2(change);
+            break;
+          case "pascal":
+            el.innerHTML = S3(change);
+            break;
+          case "snake":
+            el.innerHTML = k2(change);
+            break;
+        }
+      }
+    }
+  }
+};
+customElements.define("using-npm-lib", UsingNpmLib);
 export {
   CustomAlert,
   LitCounter,

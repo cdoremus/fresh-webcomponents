@@ -8,3 +8,4 @@ export * from "./ToolTipWC.ts";
 export * from "./TableWC.ts";
 export * from "./FormWC.ts";
 export * from "./TemplatedWC.ts";
+export * from "./UsingNpmLib.js";

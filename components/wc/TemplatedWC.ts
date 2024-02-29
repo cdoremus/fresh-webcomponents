@@ -1,4 +1,6 @@
+// Define the component's template in code
 // const template = document.createElement("template");
+// template.setAttribute("id", "template-wc");
 // template!.innerHTML = `
 //   <div class="container">
 //     <span id="title">This is inside the template</span>
