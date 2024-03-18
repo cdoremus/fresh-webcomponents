@@ -1,5 +1,7 @@
 /**
- * Definitions of web component types with emphasis on extending JSX.IntrinsicElements.
+ * Definitions of web component types with emphasis on extending
+ * JSX.IntrinsicElements. This is required to be able to use a custom
+ * element in a .tsx page without showing errors in vscode.
  */
 import { JSX } from "preact";
 import { LitElement } from "https://esm.sh/lit@3.1.0";
