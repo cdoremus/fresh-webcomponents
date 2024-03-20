@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 *,
 *::before,
@@ -143,7 +146,7 @@ hr {
   margin:0.5em;
 }
 
-.my-6 {
+/* .my-6 {
   margin-bottom: 1.5rem;
   margin-top: 1.5rem;
 }
@@ -226,7 +229,7 @@ hr {
 }
 .hover\:bg-gray-200:hover {
   background-color: #e5e7eb;
-}
+} */
 
 /* Third-party WCs*/
 two-up {
