@@ -14,7 +14,7 @@ export default function Home() {
               Fresh Counter in Preact
             </h3>
             <a
-              class="text-xs italic"
+              class="text-sm italic"
               href="https://github.com/cdoremus/deno-fresh-webcomponents/blob/main/islands/Counter.tsx"
             >
               Source code
@@ -24,7 +24,7 @@ export default function Home() {
           <div class="flex flex-col items-center gap-px">
             <h3>Web Component HTML Wrapped Counter</h3>
             <a
-              class="text-xs italic"
+              class="text-sm italic"
               href="https://github.com/cdoremus/deno-fresh-webcomponents/blob/main/components/wc/CounterWC.ts"
             >
               Source code
@@ -44,7 +44,7 @@ export default function Home() {
           <div class="flex flex-col items-center gap-px">
             <h3>Web Component Preact Wrapped Counter</h3>
             <a
-              class="text-xs italic"
+              class="text-sm italic"
               href="https://github.com/cdoremus/deno-fresh-webcomponents/blob/main/islands/WCWrappedCounter.tsx"
             >
               Source code
@@ -59,7 +59,7 @@ export default function Home() {
           <div class="flex flex-col items-center gap-px">
             <h3>LitElement Counter</h3>
             <a
-              class="text-xs italic"
+              class="text-sm italic"
               href="https://github.com/cdoremus/deno-fresh-webcomponents/blob/main/components/wc/LitCounter.js"
             >
               Source code

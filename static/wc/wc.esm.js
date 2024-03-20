@@ -33,7 +33,7 @@ var HelloWC = class extends HTMLElement {
   /** @method */
   connectedCallback() {
     this.innerHTML = `<div style="border: 2px solid black; border-radius: 10px; margin: 10px 5px; padding: 5px 10px;">
-        <h4>Hello ${this.message}!!</h4>
+        <h4 class="bg-white text-teal-900">Hello ${this.message}!!</h4>
       </div>`;
   }
 };
@@ -878,7 +878,7 @@ var FormWC = class extends HTMLElement {
         Enter Something:
         <input type="text" id="search" name="search"/>
       </label>
-      <button form="search-form">Click Here</button>
+      <button form="search-form" class="border-black bg-slate-400 px-1 drop-shadow-lg">Click Here</button>
     </form>
     `;
   }

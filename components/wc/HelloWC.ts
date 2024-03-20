@@ -24,7 +24,7 @@ class HelloWC extends HTMLElement {
   connectedCallback() {
     this.innerHTML =
       `<div style="border: 2px solid black; border-radius: 10px; margin: 10px 5px; padding: 5px 10px;">
-        <h4>Hello ${this.message}!!</h4>
+        <h4 class="bg-white text-teal-900">Hello ${this.message}!!</h4>
       </div>`;
   }
 }

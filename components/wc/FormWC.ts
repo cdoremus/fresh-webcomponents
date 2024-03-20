@@ -19,7 +19,7 @@ class FormWC extends HTMLElement {
         Enter Something:
         <input type="text" id="search" name="search"/>
       </label>
-      <button form="search-form">Click Here</button>
+      <button form="search-form" class="border-black bg-slate-400 px-1 drop-shadow-lg">Click Here</button>
     </form>
     `;
   }

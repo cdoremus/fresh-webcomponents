@@ -19,7 +19,7 @@ export default function App({ Component }: AppProps) {
         <script src="https://unpkg.com/two-up-element@1"></script>
       </head>
       {/* <body class="m-x-5 md:m-x-50 m-y-0 pt-4 mx-auto max-w-screen-lg bg-blue-100"> */}
-      <body class="bg-blue-100">
+      <body class="bg-blue-400">
         <header>
           <div class="title">
             Fresh Web Component Demo
@@ -33,10 +33,19 @@ export default function App({ Component }: AppProps) {
             />
           </div>
           <nav>
-            <a href="/custom-elements" class="">Custom Elements</a>
-            <a href="/lit" class="">Lit Components</a>
-            <a href="/third-party" class="">Third-party Components</a>
-            <a href="/" class="">Home</a>
+            <a
+              href="/custom-elements"
+              class="text-indigo-700 hover:text-cyan-600"
+            >
+              Custom Elements
+            </a>
+            <a href="/lit" class="text-indigo-700 hover:text-cyan-600">
+              Lit Components
+            </a>
+            <a href="/third-party" class="text-indigo-700 hover:text-cyan-600">
+              Third-party Components
+            </a>
+            <a href="/" class="text-indigo-700 hover:text-cyan-600">Home</a>
           </nav>
         </header>
         <main>
