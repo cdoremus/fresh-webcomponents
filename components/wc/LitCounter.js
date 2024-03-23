@@ -52,5 +52,3 @@ customElements.define(
   "lit-counter",
   LitCounter,
 );
-
-export default LitCounter;

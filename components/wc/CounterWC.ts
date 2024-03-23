@@ -37,5 +37,3 @@ class CounterWC extends HTMLElement {
   }
 }
 customElements.define("counter-wc", CounterWC);
-
-export default CounterWC;

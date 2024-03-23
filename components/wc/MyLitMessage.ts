@@ -1,14 +1,7 @@
 import { css, html, LitElement } from "https://esm.sh/lit@3.1.0";
-// import {
-//   customElement,
-//   property,
-// } from "https://esm.sh/lit@3.1.0/decorators.js";
 
-/* TS errors are ignored in the build */
-// @customElement("my-lit-message")
 // @ts-ignore LSP does not recognize LitElement syntax
 export class MyLitMessage extends LitElement {
-  // @property()
   // Properties are the component attributes
   static get properties(): { message: string } {
     return {

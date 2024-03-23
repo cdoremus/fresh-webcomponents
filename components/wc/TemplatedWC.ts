@@ -1,15 +1,3 @@
-// Define the component's template in code
-// const template = document.createElement("template");
-// template.setAttribute("id", "template-wc");
-// template!.innerHTML = `
-//   <div class="container">
-//     <span id="title">This is inside the template</span>
-//     <slot></slot>
-//     <slot name="slot2"></slot>
-//     <slot name="slot3"></slot>
-//   </div>
-// `;
-
 export class TemplatedWC extends HTMLElement {
   css = `
     div.container {

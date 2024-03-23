@@ -607,7 +607,6 @@ l2?.({ LitElement: t });
 
 // components/wc/MyLitMessage.ts
 var MyLitMessage = class extends t {
-  // @property()
   // Properties are the component attributes
   static get properties() {
     return {

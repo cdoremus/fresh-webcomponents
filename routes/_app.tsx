@@ -1,6 +1,6 @@
-import { AppProps } from "$fresh/server.ts";
+import { PageProps } from "$fresh/server.ts";
 
-export default function App({ Component }: AppProps) {
+export default function App({ Component }: PageProps) {
   return (
     <html>
       <head>
@@ -16,9 +16,8 @@ export default function App({ Component }: AppProps) {
           src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"
         >
         </script>
-        <script src="https://unpkg.com/two-up-element@1"></script>
+        <script src="https://unpkg.com/two-up-element@1" type="module"></script>
       </head>
-      {/* <body class="m-x-5 md:m-x-50 m-y-0 pt-4 mx-auto max-w-screen-lg bg-blue-100"> */}
       <body class="bg-blue-400">
         <header>
           <div class="title">

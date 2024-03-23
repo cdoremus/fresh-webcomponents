@@ -1,7 +1,7 @@
 /**
  * How to use a library in a web component - change-case here.
  */
-// 'npm:' specifier does not work since Deno is not processing this
+// 'npm:' specifier does not work since Deno is not processing this file
 import * as changeCase from "https://esm.sh/change-case@5.4.3";
 
 class UsingNpmLib extends HTMLElement {

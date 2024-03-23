@@ -29,5 +29,3 @@ class HelloWC extends HTMLElement {
   }
 }
 customElements.define("hello-wc", HelloWC);
-
-export default HelloWC;
