@@ -607,10 +607,13 @@ l2?.({ LitElement: t });
 
 // components/wc/MyLitMessage.ts
 var MyLitMessage = class extends t {
+  // Needed for TypeScript since it does not recognize TS properties
+  //   as class-level variables
+  message = "";
   // Properties are the component attributes
   static get properties() {
     return {
-      message: ""
+      message: { type: String, state: false }
     };
   }
   static get styles() {
@@ -624,7 +627,9 @@ var MyLitMessage = class extends t {
   }
   render() {
     return X`
-    <p>The message: <span class="message">${this.message}</span></p>
+    <p>The message:
+      <span class="message">${this.message}</span>
+    </p>
     `;
   }
 };
@@ -674,6 +679,10 @@ customElements.define(
 
 // components/wc/LitAlertWC.ts
 var CustomAlert = class extends t {
+  // Needed for TypeScript since it does not recognize TS properties
+  //  as class-level variables
+  icon = "";
+  theme = "";
   static get styles() {
     return v`
       :host {

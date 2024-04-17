@@ -6,6 +6,10 @@
 import { css, html, LitElement } from "https://esm.sh/lit@3.1.0";
 
 export class CustomAlert extends LitElement {
+  // Needed for TypeScript since it does not recognize TS properties
+  //  as class-level variables
+  icon = "";
+  theme = "";
   static get styles() {
     return css`
       :host {

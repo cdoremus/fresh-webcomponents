@@ -1,11 +1,13 @@
 import { css, html, LitElement } from "https://esm.sh/lit@3.1.0";
 
-// @ts-ignore LSP does not recognize LitElement syntax
 export class MyLitMessage extends LitElement {
+  // Needed for TypeScript since it does not recognize TS properties
+  //   as class-level variables
+  message = "";
   // Properties are the component attributes
-  static get properties(): { message: string } {
+  static get properties() {
     return {
-      message: "",
+      message: { type: String, state: false },
     };
   }
   static get styles() {
@@ -20,7 +22,9 @@ export class MyLitMessage extends LitElement {
 
   render() {
     return html`
-    <p>The message: <span class="message">${this.message}</span></p>
+    <p>The message:
+      <span class="message">${this.message}</span>
+    </p>
     `;
   }
 }
