@@ -19,7 +19,8 @@ export class TemplatedWC extends HTMLElement {
     const template = document.querySelector("#template-wc");
     shadow.innerHTML = `<style>${this.css}</style>`;
     // @ts-ignore bad error: "content does not exist on type element"
-    shadow.appendChild(template!.content.cloneNode(true));
+    // shadow.appendChild(template!.content.cloneNode(true));
+    shadow.appendChild(template!.content);
     // this.innerHTML = template!.content.toString();
   }
 }

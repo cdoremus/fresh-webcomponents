@@ -15,7 +15,8 @@ class MyTable extends HTMLElement {
       text-align: center;
     }
     div {
-      font-size:2rem;
+      color: red;
+      font-size:1.5rem;
       font-weight:900;
     }
   `;
